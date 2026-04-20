@@ -64,7 +64,7 @@ src/
     └── types.ts           공용 타입
 icons/                      생성된 PNG 아이콘 (16, 48, 128)
 icon.svg                    아이콘 소스(SVG)
-store/                      Chrome Web Store 등록용 설명 텍스트
+privacy-policy.md           개인정보 처리방침 (Chrome Web Store 등록용)
 ```
 
 ### 디버깅
@@ -81,7 +81,7 @@ store/                      Chrome Web Store 등록용 설명 텍스트
 
 ## Chrome Web Store 등록
 
-- 스토어 리스팅에 붙일 설명 텍스트는 [`store/listing.md`](./store/listing.md)에 있습니다.
+- 개인정보 처리방침: [`privacy-policy.md`](./privacy-policy.md)
 - 필요한 이미지 규격:
   - 아이콘 128×128 — `icons/icon-128.png`
   - 작은 홍보 타일 440×280 (필수)
