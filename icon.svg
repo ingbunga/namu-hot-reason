@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00B894"/>
+      <stop offset="100%" stop-color="#007A5F"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFE8D0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="128" rx="28" ry="28" fill="url(#bg)"/>
+
+  <!-- outer flame -->
+  <path d="M64 18
+           C 60 34 52 44 44 54
+           C 34 66 28 78 28 90
+           C 28 108 44 118 64 118
+           C 84 118 100 108 100 90
+           C 100 76 92 66 84 58
+           C 84 66 80 70 76 70
+           C 72 70 70 66 70 60
+           C 70 48 68 32 64 18 Z"
+        fill="url(#flame)"/>
+
+  <!-- inner ember -->
+  <path d="M64 72
+           C 62 78 58 82 54 86
+           C 50 90 48 96 50 102
+           C 52 108 58 112 64 112
+           C 70 112 76 108 78 102
+           C 80 96 78 90 74 86
+           C 70 82 66 78 64 72 Z"
+        fill="#007A5F" opacity="0.7"/>
+</svg>

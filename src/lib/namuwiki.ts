@@ -5,17 +5,18 @@ export function getDocumentTitleFromLocation(loc: Location = location): string |
   return decodeSafe(raw);
 }
 
-// Returns candidate keywords in priority order. When the user clicks a hot
-// search item like "빅나티" that redirects to "BIG Naughty", namuwiki keeps
-// the original term in `?from=`. That original term is often what the
-// arca.live post was written about, so it should be tried first.
+// Returns candidate keywords to try against arca.live posts, in priority
+// order. When the user clicks a hot-search item like "빅나티" that redirects
+// to "BIG Naughty", namuwiki keeps the original term in `?from=`. That term
+// is typically what the arca.live post was written about, so it goes first.
 export function getDocumentKeywordsFromLocation(loc: Location = location): string[] {
   const primary = getDocumentTitleFromLocation(loc);
-  const keywords: string[] = [];
+  if (!primary) return [];
   const params = new URLSearchParams(loc.search);
   const fromAlias = params.get('from')?.trim();
-  if (fromAlias) keywords.push(fromAlias);
-  if (primary && primary !== fromAlias) keywords.push(primary);
+  const keywords: string[] = [];
+  if (fromAlias && fromAlias !== primary) keywords.push(fromAlias);
+  keywords.push(primary);
   return keywords;
 }
 

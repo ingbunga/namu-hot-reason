@@ -162,6 +162,10 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && changes['settings']) void ensureAlarm();
 });
 
+chrome.action?.onClicked.addListener(() => {
+  void chrome.runtime.openOptionsPage();
+});
+
 chrome.runtime.onMessage.addListener((msg: Message, _sender, sendResponse) => {
   void (async () => {
     try {

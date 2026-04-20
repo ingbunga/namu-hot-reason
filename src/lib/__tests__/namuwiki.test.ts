@@ -52,7 +52,7 @@ describe('getDocumentKeywordsFromLocation', () => {
   });
 
   it('returns empty array on non-document paths', () => {
-    expect(getDocumentKeywordsFromLocation(loc('/', '?from=bar'))).toEqual(['bar']);
+    expect(getDocumentKeywordsFromLocation(loc('/', '?from=bar'))).toEqual([]);
     expect(getDocumentKeywordsFromLocation(loc('/', ''))).toEqual([]);
   });
 });

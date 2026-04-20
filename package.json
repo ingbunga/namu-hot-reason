@@ -2,18 +2,25 @@
   "name": "namu-hot-reason",
   "version": "0.1.0",
   "private": true,
-  "description": "나무위키 문서 페이지에서 실검에 오른 이유를 아카라이브 '나무위키 실검 알려주는 채널'에서 가져와 표시하는 브라우저 익스텐션.",
+  "description": "나무위키 문서 페이지에서 해당 문서가 실검에 오른 이유를 아카라이브 '나무위키 실검 알려주는 채널'에서 가져와 표시하는 브라우저 익스텐션.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/namu-hot-reason.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "icons": "node scripts/gen-icons.mjs"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.25",
     "@types/chrome": "^0.0.268",
+    "sharp": "^0.34.5",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
     "vitest": "^1.6.0"
