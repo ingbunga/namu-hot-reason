@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "나무위키 실검 이유",
+  "version": "0.1.0",
+  "description": "나무위키 문서 페이지에서 해당 키워드가 실검에 오른 이유를 아카라이브 '나무위키 실검 알려주는 채널'에서 가져와 표시합니다.",
+  "action": {
+    "default_title": "나무위키 실검 이유"
+  },
+  "options_page": "src/options/index.html",
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://namu.wiki/w/*"],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://arca.live/*",
+    "https://namu.wiki/*"
+  ],
+  "permissions": ["storage", "alarms"]
+}

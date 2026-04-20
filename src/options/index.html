@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>나무위키 실검 이유 - 설정</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        padding: 20px;
+        max-width: 480px;
+        color: #111827;
+      }
+      h1 { font-size: 18px; margin: 0 0 16px; }
+      .row { margin: 12px 0; font-size: 14px; }
+      .row label { display: inline-block; min-width: 110px; }
+      input[type="number"] { width: 80px; }
+      select { min-width: 140px; }
+      .actions { margin-top: 20px; display: flex; gap: 8px; align-items: center; }
+      button { padding: 6px 14px; cursor: pointer; }
+      .status { color: #059669; font-size: 13px; }
+      .hint { color: #6b7280; font-size: 12px; margin-top: 20px; line-height: 1.5; }
+    </style>
+  </head>
+  <body>
+    <h1>나무위키 실검 이유 - 설정</h1>
+
+    <div class="row">
+      <label><input type="checkbox" id="enabled" /> 활성화</label>
+    </div>
+
+    <div class="row">
+      <label for="refreshIntervalMinutes">갱신 주기(분)</label>
+      <input type="number" id="refreshIntervalMinutes" min="1" max="120" />
+    </div>
+
+    <div class="row">
+      <label for="cardPosition">카드 위치</label>
+      <select id="cardPosition">
+        <option value="top">문서 상단</option>
+        <option value="floating">우측 하단 플로팅</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button id="save">저장</button>
+      <button id="refresh">지금 갱신</button>
+      <span class="status" id="status"></span>
+    </div>
+
+    <p class="hint">
+      아카라이브 「나무위키 실검 알려주는 채널」의 게시글을 참고하여 이유를 표시합니다.
+      표시되는 내용은 사용자 제보 기반이며, 정확성을 보장하지 않습니다.
+    </p>
+
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>
