@@ -6,6 +6,8 @@
 
 나무위키 문서 페이지에서 해당 문서가 **실검에 왜 올랐는지**를 [아카라이브 「나무위키 실검 알려주는 채널」](https://arca.live/b/namuhotnow)의 사용자 제보 글을 바탕으로 보여 주는 브라우저 익스텐션.
 
+[Chrome 웹스토어](https://chromewebstore.google.com/detail/나무위키-실검-이유/ahjiddcgeaggnabpeejmhhmohlonaapg?authuser=0&hl=ko)
+
 ## 미리보기
 
 ![namu-hot-reason 실행 예시](./docs/example.png)
